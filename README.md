@@ -50,19 +50,23 @@ It provides a spreadsheet interface with support for basic mathematical and data
     *   LOWER: Converts the text in a cell to lowercase.
     *   REMOVE\_DUPLICATES: Removes duplicate rows from a selected range.
 
-## Known Issues
+## Setup and Usage
 
-*   **Cell Dependencies:** The cell dependencies feature is not fully implemented. Formulas in cells do not automatically update when the values in the referenced cells change.
-*   **FIND\_AND\_REPLACE:** The `FIND_AND_REPLACE` function is not yet implemented.
+1.  Clone the repository:
 
-## Instructions
+    ```
+    git clone https://github.com/magaledon/google-sheets-clone.git
+    ```
 
-1.  Open the `index.html` file in your web browser.
-2.  The spreadsheet interface will be displayed.
-3.  Enter data into the cells.
-4.  Use the formula bar to enter formulas (e.g., `=SUM(A1,B2)`).
-5.  Click the "Calculate" button to execute the formula.
-6.  The result will be displayed in the designated result area.
+2.  Open the `index.html` file in your web browser.
+
+3.  Interact with the spreadsheet by entering data, applying formulas, and using data quality functions.
+
+## Additional Notes
+
+-   This project provides a simplified implementation of Google Sheets and may not include all the features and capabilities of the full application.
+-   The focus of this assignment was to demonstrate proficiency in HTML, CSS, and JavaScript, as well as an understanding of spreadsheet concepts and data manipulation techniques.
+
 
 
 
