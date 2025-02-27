@@ -1,15 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Simple Spreadsheet</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Spreadsheet Clone</title>
     <link rel="stylesheet" href="googlesheet.css">
 </head>
+
 <body>
-    <input type="text" id="formulaInput" placeholder="Enter formula (e.g., =SUM(A1:A5))">
-    <button onclick="calculateSum()">Calculate</button>
+    
+    <div class="toolbar">
+        <button>File</button>
+        <button>Edit</button>
+        <button>View</button>
+        <button>Insert</button>
+        <button>Format</button>
+        <button>Data</button>
+        <button>Tools</button>
+        <button>Add-ons</button>
+        <button>Help</button>
+
+        <button onclick="applyFormat('bold')">Bold</button>
+        <button onclick="applyFormat('italic')">Italic</button>
+        <button onclick="changeFontSize()">Font Size</button>
+        <input type="color" id="fontColor" onchange="applyFormat('color', this.value)">
+
+        <!-- Add/Delete Row/Column Buttons -->
+        <button onclick="addRow()">Add Row</button>
+        <button onclick="addColumn()">Add Column</button>
+        <button onclick="deleteRow()">Delete Row</button>
+        <button onclick="deleteColumn()">Delete Column</button>
+    </div>
+    <div class="formula-bar">
+        <label for="formulaInput">Formula:</label>
+        <input type="text" id="formulaInput" placeholder="Enter formula (e.g., =SUM(A1, A2, A3))">
+        <button onclick="calculateSum()">Calculate</button>
+    </div>
 
     <table id="spreadsheet">
+        <!-- JavaScript will generate the spreadsheet here -->
     </table>
+
+
+    <table id="spreadsheet"></table>
+    <div id="results-area">
+        <strong>RESULTS:</strong>
+        <div id="result"></div>
+    </div>
+
+
     <script src="googlesheet.js"></script>
+    
 </body>
+
 </html>
