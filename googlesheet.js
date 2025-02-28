@@ -6,8 +6,8 @@ let dragStartCell = null;
 
 // Function to generate the spreadsheet
 function generateSpreadsheet() {
-    const numRows = 10;
-    const numCols = 10;
+    const numRows = 25;
+    const numCols = 26;
 
     // Create table headers (A, B, C, ...)
     let headerRow = table.insertRow();
